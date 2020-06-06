@@ -8,9 +8,6 @@ const App = () => {
     const [query, setQuery] = useState('');
     const [list, setList] = useState([]);
 
-    // const list = ['tree', 'horse', 'cat', 'dog', 'hook'];
-    
-
     useEffect(() => {
       async function fetchData(){
         const res = await fetch('https://restcountries.eu/rest/v2/all');
@@ -30,7 +27,6 @@ const App = () => {
     
     return (
       <div>
-      
         <Search query={query} handleQuery={handleQuery} />
         <CountryList list={filteredList} />
       </div>
